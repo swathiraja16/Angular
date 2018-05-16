@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Dish } from '../shared/dish';
+import { DISHES } from '../shared/dishes';
+import { Comment } from '../shared/comment';
 
 /*const DISH = {
   name: 'Uthappizza',
@@ -51,7 +53,8 @@ export class DishdetailComponent implements OnInit {
 
   @Input()
   dish: Dish;
-  //dishcomment = DISH.comments;
+ // dishcomment: Comment[]= Dish.comments;
+  
 
   constructor() { }
 
