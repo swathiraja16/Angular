@@ -26,4 +26,8 @@ export class DishService {
     return observableOf(DISHES.filter((dish) => dish.featured)[0]).delay(2000);
   }
 
+  getDishIds(): Observable<number[]>{
+    return observableOf(DISHES.map(dish=>dish.id));
+  }
+
 }
