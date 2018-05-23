@@ -27,8 +27,8 @@ export class ContactComponent implements OnInit {
     },
     'lastname':{
       'required': 'Firstname is required.',
-      'minlength': 'First name should be at least 2 characters long',
-      'maxlength': 'First name cannot be more that 25 characters long'
+      'minlength': 'Last name should be at least 2 characters long',
+      'maxlength': 'Last name cannot be more that 25 characters long'
     },
     'telnum': {
       'required': 'Tel. num is required',
@@ -51,7 +51,7 @@ export class ContactComponent implements OnInit {
   createForm(): void {
     this.feedbackForm = this.fb.group({
       firstname:['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
-      lastname:['', [Validators.required, Validators.minLength(2), Validators.maxLength(2)]],
+      lastname:['', [Validators.required, Validators.minLength(2), Validators.maxLength(25)]],
       telnum:[0,[Validators.required, Validators.pattern]],
       email:['',[Validators.required, Validators.email]],
       agree:false,
