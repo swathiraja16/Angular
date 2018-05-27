@@ -1,9 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Inject} from '@angular/core';
 import { Leader } from '../shared/leader';
 import { LEADERS } from '../shared/leaders';
 import { LeaderService } from '../services/leader.service';
 
 import { flyInOut, expand } from '../animations/app.animation';
+
+import { baseURL } from '../shared/baseurl';
+import { RestangularModule, Restangular } from 'ngx-restangular';
+import { ProcessHttpmsgService} from '../services/process-httpmsg.service';
+
 
 @Component({
   selector: 'app-about',
@@ -21,11 +26,13 @@ import { flyInOut, expand } from '../animations/app.animation';
 export class AboutComponent implements OnInit {
 
   leader= LEADERS;
+  errMess: string;
 
-  constructor(private leaderservice: LeaderService) { }
+
+  constructor(private leaderservice: LeaderService, @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
-    this.leaderservice.getLeaders().subscribe(leader => this.leader = leader);
+    this.leaderservice.getLeaders().subscribe(leader => this.leader = leader, errmess => this.errMess = <any>errmess);
   }
 
 }

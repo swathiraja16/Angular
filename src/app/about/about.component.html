@@ -58,18 +58,21 @@
           <h2>Corporate Leadership</h2>
           <md-list *ngIf="leader" [@expand]>
             <md-list-item *ngFor = "let lead of leader">
-              <img md-list-avatar src={{lead.image}} alt="{{lead.name}}">
+              <img md-list-avatar src="{{BaseURL + lead.image}}" alt="{{lead.name}}">
               <h2 md-line>{{lead.name}}</h2>
               <p md-line>{{lead.designation}}</p>
               <p md-line>{{lead.description}}</p>
             </md-list-item>
             
           </md-list>
-          <div [hidden]="leader">
-              <md-spinner>
-                <h4>Loading... Please Wait</h4>
-              </md-spinner>
-            </div>
+          
+          <div [hidden]="leader || errMess">
+            <md-spinner></md-spinner><h4>Loading... Please Wait</h4>
+          </div>
+          <div *ngIf="errMess">
+            <h2>Error</h2>
+            <h4>{{errMess}}</h4>
+          </div>
        </div>
        
 </div>
