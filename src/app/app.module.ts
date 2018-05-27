@@ -22,6 +22,7 @@ import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 import { ProcessHttpmsgService } from './services/process-httpmsg.service';
+import { FeedbackService } from './services/feedback.service';
 
 import { baseURL } from './shared/baseurl';
 
@@ -60,7 +61,7 @@ import { HighlightDirective } from './directives/highlight.directive';
   
   providers: [DishService,
   PromotionService,
-  LeaderService, ProcessHttpmsgService,
+  LeaderService, ProcessHttpmsgService, FeedbackService,
 { provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent]
 })

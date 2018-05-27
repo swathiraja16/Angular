@@ -15,29 +15,27 @@
           <div fxFlex="50" fxFlexOffset="20px">
                 <h4>Our Address</h4>
                 <address>
-		              121, Clear Water Bay Road<br>
-		              Clear Water Bay, Kowloon<br>
-		              HONG KONG<br>
-		              <i class="fa fa-phone"></i>: +852 1234 5678<br>
-		              <i class="fa fa-fax"></i>: +852 8765 4321<br>
+                    #123, XYZ road<br>
+                    Tallahassee<br>
+                   Florida<br>
+		              <i class="fa fa-phone"></i>: +1(614) 906 9176<br>
+		              <i class="fa fa-fax"></i>: +1(614) 906 9176<br>
 		              <i class="fa fa-envelope"></i>: 
-                        <a href="mailto:confusion@food.net">confusion@food.net</a>
-		           </address>
+                  <a href="mailto:rajaswathi16@gmail.com">rajaswathi16@gmail.com</a>
+                </address>
                <p></p>
                 <div>
-                    <a md-raised-button href="tel:+85212345678"><i class="fa fa-phone"></i> Call</a>
+                    <a md-raised-button href="tel:+16149069176"><i class="fa fa-phone"></i> Call</a>
                     <a md-raised-button><i class="fa fa-skype"></i> Skype</a>
-                    <a md-raised-button href="mailto:confusion@food.net"><i class="fa fa-envelope-o"></i> Email</a>
+                    <a md-raised-button href="mailto:rajaswathi16@gmail.com"><i class="fa fa-envelope-o"></i> Email</a>
                 </div>
             </div>
-          <div fxFlex="40">
-                <h4>Map of our Location</h4>
-          </div>
+          
         </div>
       </div>
       <div fxFlex fxFlexOffset="20px" class="form-size">
         <h3>Send us your Feedback</h3>
-        <p>{{ feedbackForm.value | json }} {{ feedbackForm.status | json }}</p>
+       <!-- <p>{{ feedbackForm.value | json }} {{ feedbackForm.status | json }}</p>-->
 
         <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
             <p>
@@ -98,3 +96,4 @@
                 
       </div>
 </div>
+
